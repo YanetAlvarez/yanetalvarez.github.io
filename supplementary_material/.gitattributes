@@ -1,3 +1,4 @@
-# Track mp4 and gif with Git LFS
+# Track mp4 with Git LFS (GIFs are small enough to commit directly)
 *.mp4 filter=lfs diff=lfs merge=lfs -text
-*.gif filter=lfs diff=lfs merge=lfs -text
+# GIFs are small enough to commit directly to GitHub
+# *.gif filter=lfs diff=lfs merge=lfs -text
