@@ -8,6 +8,24 @@
   <meta name="description" content="Galería de animaciones (.gif) y vídeos (.mp4)">
   <meta name="keywords" content="">
 
+  <!-- Base Path for GitHub Pages subdirectory -->
+  <script>
+    // Detect base path automatically for GitHub Pages subdirectory
+    // Must be executed immediately to set base before other resources load
+    (function() {
+      var path = window.location.pathname;
+      // Remove trailing index.html if present
+      path = path.replace(/\/index\.html$/, '');
+      // Get directory path
+      var basePath = path.substring(0, path.lastIndexOf('/') + 1) || '/';
+      // Ensure basePath starts and ends with /
+      if (!basePath.startsWith('/')) basePath = '/' + basePath;
+      if (!basePath.endsWith('/')) basePath += '/';
+      // Use document.write to ensure base tag is inserted before other resources
+      document.write('<base href="' + basePath + '">');
+    })();
+  </script>
+
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
